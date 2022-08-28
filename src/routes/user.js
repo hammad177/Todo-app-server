@@ -90,7 +90,6 @@ routes.post("/logout", auth, async (req, res) => {
     const user = await SessionModel.destroy({
       where: {
         id: req.session_id,
-        userId: req.user.id,
       },
     });
 

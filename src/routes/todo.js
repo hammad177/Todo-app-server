@@ -28,7 +28,6 @@ routes.post("/", auth, async (req, res) => {
 
 routes.get("/all", auth, async (req, res) => {
   try {
-    console.log("req.query.sort", req.query.sort);
     let todo;
     if (req.query.sort === 7) {
       const { startTime, endTime } = dateBoundariesLastSevenDays();
