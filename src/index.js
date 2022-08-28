@@ -11,6 +11,10 @@ app.use(cors());
 app.use("/api/auth", require("./routes/user"));
 app.use("/api/todo", require("./routes/todo"));
 
+app.get("/", (req, res) => {
+  res.send("Api is working");
+});
+
 sequelize
   .sync()
   .then(() => {
